@@ -5,17 +5,22 @@
     <h1>Bienvenue sur mon blog</h1>
 
 
-    <a href="{{ path('blog_show', { 'slug': "javascript-vs-php" }) }}">
-        Testing show() method from BlogController with a real article s slug.
+    <a href="{{ path('blog_article_show', { 'slug': "javascript-vs-php" }) }}">
+        Testing article_show() method from BlogController with a real article s slug.
     </a>
     <br>
-    <a href="{{ path('blog_index') }}">
-        Testing index() method from BlogController to view all articles.
+    <a href="{{ path('blog_article_list') }}">
+        Testing article_list() method from BlogController to view all articles.
     </a>
     <br>
-    <a href="{{ path('blog_show_category', {'categoryName': "javascript"}) }}">
-        Testing show_categroy() method from BlogController to view articles from a category.
+    <a href="{{ path('category_show', {'name': "javascript"}) }}">
+        Testing category_show() method from BlogController to view articles from a category.
+    </a>
+    <br>
+    <a href="{{ path('category_add') }}">
+        Testing category_add() method from BlogController to view articles from a category.
     </a>
 
 
 {% endblock %}
+
